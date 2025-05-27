@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring boot</title>
+</head>
+<body>
+    <p>Book Form</p>
+    <form method="post" th:action="@{/book/new}" th:object="${bookForm}">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" th:field="*{name}">
+        </div>
+        <div style="padding-top: 10px;">
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" th:field="*{author}">
+        </div>
+        <div style="padding-top: 10px;">
+            <label for="description">Description</label>
+           <textarea name="description" id="description" th:field="*{description}"></textarea>
+        </div>
+        <div style="padding-top: 10px;">
+            <button type="reset">Cancel</button>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
