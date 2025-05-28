@@ -1,10 +1,16 @@
 package com.example.catalog.form;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class BookForm {
+
+    @NotBlank
     private String name;
 
+    @NotBlank
     private String author;
-
+    
+    @NotBlank
     private String description;
 
     public String getName() {
