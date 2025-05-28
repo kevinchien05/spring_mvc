@@ -10,7 +10,7 @@ public class HomeController {
 
     @GetMapping("/home")
     public String home(Model model) {
-        model.addAttribute("message", "Hello from Spring MVC");
+        model.addAttribute("message", "Hello from Spring MVC + Bootstrap 5");
         return "home";
     }
     
